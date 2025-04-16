@@ -15,6 +15,13 @@ url = "https://api.apr.dev"
 cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
 
+# [provider]
+# cluster = "Devnet"
+# wallet = "~/.config/solana/id.json"  # or path to your keypair
+
+[programs.devnet]
+multiplayer_rooms = "DaPiwFoWxvBcoN94HZjcfz2bgaEQ3hfaDJivMZ7CuPuB"
+
 [workspace]
 members = ["programs/*"]
 # members = ["programs/*", "programs-ecs/components/*", "programs-ecs/systems/*"]

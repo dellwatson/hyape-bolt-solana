@@ -1380,7 +1380,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "multi-player-server-hyape"
+name = "multiplayer_rooms"
 version = "0.2.2"
 dependencies = [
  "bolt-lang",
