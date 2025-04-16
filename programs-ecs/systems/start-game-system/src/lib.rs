@@ -1,7 +1,14 @@
 use bolt_lang::*;
-
+use player::{Player, PlayerError};
+use room::{Room, RoomError};
 // declare_id!("StrtGmSysYourProgramIdHere12345678901234567890");
 declare_id!("GPE1cWhMgMDiVsAX8waKaqLoBq4NGD6yxLetoz3KpiHZ");
+
+#[error_code]
+pub enum GameError {
+    #[msg("Room is full or not in lobby state")]
+    RoomFullOrNotInLobby,
+}
 
 #[system]
 pub mod system_start_game {
@@ -11,7 +18,9 @@ pub mod system_start_game {
         
         // Only the host can start the game
         if !ctx.accounts.player.is_host {
-            return Err(Error::InvalidArgument.into());
+            // return Err(Error::InvalidArgument.into());
+            // If the above doesn't work, try:
+            return Err(GameError::RoomFullOrNotInLobby.into());
         }
         
         // Update room status to in-progress

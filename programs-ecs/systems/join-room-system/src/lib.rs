@@ -1,4 +1,6 @@
 use bolt_lang::*;
+use player::{Player, PlayerError};
+use room::{Room, RoomError};
 
 // declare_id!("JoinRmSysYourProgramIdHere12345678901234567890");
 declare_id!("8f6SZ35jjJqHGpkrwZubfLsRaCnNRd7TKX4qRGSy1KpZ");
@@ -14,7 +16,13 @@ pub mod system_join_room {
         // Check if room exists and has space
         if room.status != 0 || room.player_count >= room.max_players {
             // Error handling would go here in a real implementation
-            return Err(Error::InvalidArgument.into());
+            // return Err(Error::InvalidArgument.into());
+            return Err(RoomError::NotInLobbyState.into());
+
+            // To (depending on what's available in the current bolt-lang version)
+            // return Err(Error::InvalidInput.into());
+            // or
+            // return Err(Error::Other("Invalid argument").into());
         }
 
         // Add player ID to room's player_ids array

@@ -797,6 +797,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724"
 
 [[package]]
+name = "common"
+version = "0.2.2"
+dependencies = [
+ "bolt-lang",
+]
+
+[[package]]
 name = "console_error_panic_hook"
 version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -842,6 +849,9 @@ name = "create-room-system"
 version = "0.2.2"
 dependencies = [
  "bolt-lang",
+ "common",
+ "player",
+ "room",
  "serde",
 ]
 
@@ -1037,6 +1047,9 @@ name = "finalize-game-system"
 version = "0.2.2"
 dependencies = [
  "bolt-lang",
+ "common",
+ "player",
+ "room",
  "serde",
 ]
 
@@ -1248,6 +1261,9 @@ name = "join-room-system"
 version = "0.2.2"
 dependencies = [
  "bolt-lang",
+ "common",
+ "player",
+ "room",
  "serde",
 ]
 
@@ -2010,6 +2026,9 @@ name = "start-game-system"
 version = "0.2.2"
 dependencies = [
  "bolt-lang",
+ "common",
+ "player",
+ "room",
  "serde",
 ]
 
@@ -2198,6 +2217,7 @@ name = "update-player-system"
 version = "0.2.2"
 dependencies = [
  "bolt-lang",
+ "common",
  "player",
  "serde",
 ]

@@ -34,3 +34,19 @@ pub struct Player {
     pub game_mode: [u8; 16],  // Game mode as bytes
     pub status: u8,           // 0=available, 1=busy, etc.
 }
+
+// Add this to your existing Player component file
+#[error_code]
+pub enum PlayerError {
+    #[msg("Player is not the host")]
+    NotHost,
+    
+    #[msg("Player is not ready")]
+    NotReady,
+    
+    #[msg("Invalid player state")]
+    InvalidState,
+    
+    #[msg("Generic player error")]
+    GenericError,
+}

@@ -5,13 +5,11 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
+common = "HokPKpkSoJtDko4EaeKioyddtnZvedzaMDjQxzXEQ82b"
 create-room-system = "CJ2ddnADWJuBeJ5vr5kCPjMiZfPMT6e83bU4kBAsbCXz"
 finalize-game-system = "5j31pAW4KRxYdWM718y2vRiL2963YE9Q3EFLZNdv3DPX"
-# hyape = "DaPiwFoWxvBcoN94HZjcfz2bgaEQ3hfaDJivMZ7CuPuB"
 join-room-system = "8f6SZ35jjJqHGpkrwZubfLsRaCnNRd7TKX4qRGSy1KpZ"
-# movement = "5uGhKQqt2i8f9Des8T8yc4UE6Vg55jwFn8zYN2rZ8eZL"
 player = "AEg8kcweaPo1H8o98zsBuh9VfdJTj9suNdTWDzNJfBu3"
-# position = "AKtYnML4MTZ25FNnmoRxuyXQ5c8RuCq846nqFGSkYpoc"
 room = "4E1EMr7Df7mfNkRHnnQQDfdckcMZnq2qDKTrQUKc4wdU"
 start-game-system = "GPE1cWhMgMDiVsAX8waKaqLoBq4NGD6yxLetoz3KpiHZ"
 update-player-system = "Gm4mG6xn43RDxsXUjJDiUrq8vE2FWQFWj8Ez3xViPYqk"

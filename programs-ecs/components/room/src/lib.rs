@@ -15,3 +15,19 @@ pub struct Room {
     pub player_count: u8,     // Current number of players
     pub player_ids: [[u8; 32]; 16], // Array of up to 16 player IDs
 }
+
+// Add this to your existing Room component file
+#[error_code]
+pub enum RoomError {
+    #[msg("Room is full")]
+    RoomFull,
+    
+    #[msg("Room is not in lobby state")]
+    NotInLobbyState,
+    
+    #[msg("Only the host can perform this action")]
+    HostOnly,
+    
+    #[msg("Generic room error")]
+    GenericError,
+}
