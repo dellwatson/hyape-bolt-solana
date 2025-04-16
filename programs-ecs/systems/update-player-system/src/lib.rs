@@ -1,4 +1,5 @@
 use bolt_lang::*;
+use player::Player;
 
 // declare_id!("UpdPlrSysYourProgramIdHere12345678901234567890");
 declare_id!("Gm4mG6xn43RDxsXUjJDiUrq8vE2FWQFWj8Ez3xViPYqk");
