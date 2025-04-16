@@ -4,15 +4,9 @@
 resolution = true
 skip-lint = false
 
+
 [programs.localnet]
-common = "HokPKpkSoJtDko4EaeKioyddtnZvedzaMDjQxzXEQ82b"
-create-room-system = "CJ2ddnADWJuBeJ5vr5kCPjMiZfPMT6e83bU4kBAsbCXz"
-finalize-game-system = "5j31pAW4KRxYdWM718y2vRiL2963YE9Q3EFLZNdv3DPX"
-join-room-system = "8f6SZ35jjJqHGpkrwZubfLsRaCnNRd7TKX4qRGSy1KpZ"
-player = "AEg8kcweaPo1H8o98zsBuh9VfdJTj9suNdTWDzNJfBu3"
-room = "4E1EMr7Df7mfNkRHnnQQDfdckcMZnq2qDKTrQUKc4wdU"
-start-game-system = "GPE1cWhMgMDiVsAX8waKaqLoBq4NGD6yxLetoz3KpiHZ"
-update-player-system = "Gm4mG6xn43RDxsXUjJDiUrq8vE2FWQFWj8Ez3xViPYqk"
+multiplayer_rooms = "DaPiwFoWxvBcoN94HZjcfz2bgaEQ3hfaDJivMZ7CuPuB"
 
 [registry]
 url = "https://api.apr.dev"
@@ -22,7 +16,9 @@ cluster = "Localnet"
 wallet = "~/.config/solana/id.json"
 
 [workspace]
-members = ["programs/*", "programs-ecs/components/*", "programs-ecs/systems/*"]
+members = ["programs/*"]
+# members = ["programs/*", "programs-ecs/components/*", "programs-ecs/systems/*"]
+
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
@@ -42,6 +38,7 @@ bind_address = "0.0.0.0"
 url = "https://rpc.magicblock.app/devnet/"
 ledger = ".bolt/test-ledger"
 rpc_port = 8899
+
 
 [[test.validator.account]]
 address = "EHLkWwAT9oebVv9ht3mtqrvHhRVMKrt54tF3MfHTey2K"
